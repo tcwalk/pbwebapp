@@ -5,7 +5,9 @@
 /* define variabe, in this example, sass already has $gray-light*/
 /*$light-gray: #777;*/
 $gray-medium-light: #eaeaea;
-
+$ndsu-green: #363;
+$ndsu-yellow: #fc0;
+$hover_color: #bb5500;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -23,26 +25,28 @@ img {
 
 body {
   padding-top: 60px;
+/*  background-color: $ndsu-green;
+ */
 }
 
 section {
   overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
   }
-}
+
+  textarea {
+    resize: vertical;
+  }
+
+  .center {
+    text-align: center;
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
 
 
 
-/* typography */
+  /* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -71,21 +75,67 @@ p {
 
 
 
-/* header */
+body{
+  .navbar.navbar-fixed-top.navbar-inverse{
+    background: image_url('ndsu_bg_header.jpg');
+    background-color: $ndsu-green;
+    a {
+      color: $ndsu-yellow;
+      &:hover {
+        color: $hover_color;
+        text-decoration: none;
+      }
+    }
+  }
+/*  ul.nav.navbar-nav.navbar-right {
+      color: red;
+    background-color: yellow;
+  }
+*/
+}
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+
+/* header */
+/*header-container-wrapper{
+  color: red;
+}
+*/
+header {
+  /*    nav {
+        font-size: 1.7em;
+      &:a:hover {
+        color: $gray-darker;
+      }
+      li {
+        color: red;
+      }
+    }
+*/
+  #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: $ndsu-yellow;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    &:hover {
+      color: $hover_color;
+      text-decoration: none;
+    }
+  }
+/*  li {
+    a{
+      color: red;
+      background-color: yellow;
+    }
+  }
   &:hover {
-    color: white;
+    color: red;
     text-decoration: none;
   }
+*/
 }
 
 
@@ -97,11 +147,15 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  background: image_url('ndsu_bg_header.jpg') no-repeat center center;
+  background-color: $ndsu-green;
+  em {
+    color: $ndsu-green;
+  }
   a {
-    color: $gray;
-    &:a:hover {
-      color: $gray-darker;
+    color: $ndsu-green;
+    &:hover {
+      color: $hover_color;
     }
   }
   small {
@@ -114,6 +168,9 @@ footer {
       float: left;
       margin-left: 15px;
     }
+  }
+  p {
+    color: $ndsu-yellow;
   }
 
 }
@@ -283,7 +340,8 @@ span.picture {
     }
     &:hover {
       text-decoration: none;
-      color: blue;
+/*      color: $hover_color; */
+      color: $hover_color;
     }
   }
   strong {

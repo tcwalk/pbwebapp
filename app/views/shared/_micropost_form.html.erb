@@ -15,7 +15,7 @@
 <script type="text/javascript">
     $('#micropost_picture').bind('change', function() {
         var size_in_megabytes = this.files[0].size/1024/1024;
-        var file_name = this.files[0].name;
+        var file_name = this.files[0].name.toLowerCase();
         var jpg = /jpg$/
         var jpeg = /jpeg$/
         var png = /png$/

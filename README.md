@@ -1,6 +1,11 @@
-# Ruby on Rails Tutorial sample application
+# NDSU plant breeding web application
 
-This is the sample application for
+This is the North Dakota State University Department of Plant Sciences 
+plant breeding web application. It is designed to connect to plant breeding
+databases and run common analysis and graphics tasks.
+ 
+The NDSU PBWebApp was started from the sample application for
+
 [*Ruby on Rails Tutorial:
 Learn Web Development with Rails*](http://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
